@@ -265,120 +265,216 @@
 // console.log(bmiCategory(86, 1.80))
 
 
-let colors =["red", "yallow", "green"]
-let vegetables =["tomato", "potato", "cucamber"]
-let food =[colors,vegetables]
+// let colors =["red", "yallow", "green"]
+// let vegetables =["tomato", "potato", "cucamber"]
+// let food =[colors,vegetables]
 
-console.log(food[0][2])
-colors.push("purple")
-console.log(colors)
-colors.shift()
-console.log(colors)
+// console.log(food[0][2])
+// colors.push("purple")
+// console.log(colors)
+// colors.shift()
+// console.log(colors)
 
-function addNumbers(array, string) {
-    array.push(string);
-    return array;
-}
-const arr=[1, 2, 3, 4, 5]
-console.log(addNumbers(arr, "6"))
-
-
-function concatStrings(array, string1, string2) {
-    return array.concat(string1, string2).join("-");
-}
-let array = ["A", "B"];
-
-console.log(concatStrings(array, "C", "D"));
-
-let names = ["yousef", "ahmad", "omar", "shadi"];
-function toUppercase(array) {
-    return array.map(element => element.toUpperCase());
-}
-console.log(toUppercase(names));
-
-function isUnique(array) {
-    return new Set(array).size === array.length;
-}
-console.log(isUnique([1, 2, 3, 4]))
+// function addNumbers(array, string) {
+//     array.push(string);
+//     return array;
+// }
+// const arr=[1, 2, 3, 4, 5]
+// console.log(addNumbers(arr, "6"))
 
 
-function removeDuplicates(array) {
-    return [...new Set(array)];
-}
-console.log(removeDuplicates([1, 1, 2, 2, 3, 3, 4]))
+// function concatStrings(array, string1, string2) {
+//     return array.concat(string1, string2).join("-");
+// }
+// let array = ["A", "B"];
+
+// console.log(concatStrings(array, "C", "D"));
+
+// let names = ["yousef", "ahmad", "omar", "shadi"];
+// function toUppercase(array) {
+//     return array.map(element => element.toUpperCase());
+// }
+// console.log(toUppercase(names));
+
+// function isUnique(array) {
+//     return new Set(array).size === array.length;
+// }
+// console.log(isUnique([1, 2, 3, 4]))
 
 
-function flattenArray(array) {
-    return array.flat(Infinity);
-}
-console.log(flattenArray([1, [2, 3], [4, [5, 6]]]));
-
-function chunkArray(array, chunkSize) {
-    let result = [];
-
-    for (let i = 0; i < array.length; i += chunkSize) {
-        result.push(array.slice(i, i + chunkSize));
-    }
-
-    return result;
-}
-console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3))
+// function removeDuplicates(array) {
+//     return [...new Set(array)];
+// }
+// console.log(removeDuplicates([1, 1, 2, 2, 3, 3, 4]))
 
 
-function sortByProperty(array, property) {
-    return [...array].sort((a, b) => {
-        return a[property] - b[property];
-    });
-}
-let students = [
-    { name: "Yousef", age: 25 },
-    { name: "Ahmad", age: 20 },
-    { name: "Omar", age: 23 }
-]
-console.log(sortByProperty(students, "age"));
+// function flattenArray(array) {
+//     return array.flat(Infinity);
+// }
+// console.log(flattenArray([1, [2, 3], [4, [5, 6]]]));
+
+// function chunkArray(array, chunkSize) {
+//     let result = [];
+
+//     for (let i = 0; i < array.length; i += chunkSize) {
+//         result.push(array.slice(i, i + chunkSize));
+//     }
+
+//     return result;
+// }
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3))
 
 
-function groupBy(array, property) {
-    let result = {};
-    for (let item of array) {
-        let key = item[property];
-        if (!result[key]) {
-            result[key] = [];
-        }
-        result[key].push(item);
-    }
-    return result;
-}
-let student = [
-    { name: "Yousef", city: "Amman" },
-    { name: "Ahmad", city: "Amman" },
-    { name: "Omar", city: "Aqaba" }
+// function sortByProperty(array, property) {
+//     return [...array].sort((a, b) => {
+//         return a[property] - b[property];
+//     });
+// }
+// let students = [
+//     { name: "Yousef", age: 25 },
+//     { name: "Ahmad", age: 20 },
+//     { name: "Omar", age: 23 }
+// ]
+// console.log(sortByProperty(students, "age"));
+
+
+// function groupBy(array, property) {
+//     let result = {};
+//     for (let item of array) {
+//         let key = item[property];
+//         if (!result[key]) {
+//             result[key] = [];
+//         }
+//         result[key].push(item);
+//     }
+//     return result;
+// }
+// let student = [
+//     { name: "Yousef", city: "Amman" },
+//     { name: "Ahmad", city: "Amman" },
+//     { name: "Omar", city: "Aqaba" }
+// ];
+// console.log(groupBy(student, "city"));
+
+
+
+
+// function grades(num){
+//     if(num > 90){
+//         return `A`;
+//     }else if(num < 90 && num >= 80){
+//         return `B`;
+//     }else if(num < 80 && num >=70){
+//         return `C`;
+//     }else if(num < 70 && num > 60){
+//         return `D`;
+//     }else{
+//         return `F`;
+//     }
+// }
+
+// function leapYears(year){
+//     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+// }
+
+
+// console.log(grades(85));
+// console.log(leapYears(2004))
+
+
+
+const myInfo = {
+    name: "Yousef",
+    age: 23
+};
+console.log(myInfo.age);
+console.log(myInfo.name);
+myInfo.name = "Ahmad";
+console.log(myInfo.name);
+
+const students = [
+    { name: "Aya", age: 26 },
+    { name: "Omar", age: 24 },
 ];
-console.log(groupBy(student, "city"));
+console.log(students[0].name);
+console.log(students[1].name);
 
 
+function createStudent(name, grade) {
+    return {
+        name: name,
+        grade: grade,
+
+        isPassing() {
+            return grade >= 60;
+        }
+    };
+}
+const student1 = createStudent("Yousef", 80);
+const student2 = createStudent("Omar", 50);
+
+console.log(student1);
+console.log(student1.isPassing());
+console.log(student2.isPassing());
+
+function mergeObjects(obj1, obj2) {
+    return {
+        ...obj1,
+        ...obj2
+    };
+}
+const personOpjects = {
+    name: "Yousef",
+    age: 22
+};
+
+const job = {
+    company: "Dynamix",
+    position: "Developer"
+};
+
+const results = mergeObjects(personOpjects, job);
+
+console.log(results);
 
 
-function grades(num){
-    if(num > 90){
-        return `A`;
-    }else if(num < 90 && num >= 80){
-        return `B`;
-    }else if(num < 80 && num >=70){
-        return `C`;
-    }else if(num < 70 && num > 60){
-        return `D`;
-    }else{
-        return `F`;
+function pickKeys(obj, keys) {
+    const result = {};
+
+    for (const key of keys) {
+        if (key in obj) {
+            result[key] = obj[key];
+        }
     }
+
+    return result;
 }
+const person = {
+    name: "Yousef",
+    age: 23,
+    city: "Amman",
+    job: "Developer"
+};
 
-function leapYears(year){
-    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+const result = pickKeys(person, ["name", "age"]);
+
+console.log(result);
+
+
+function objectToArray(obj) {
+    const result = [];
+
+    for (const key in obj) {
+        result.push([key, obj[key]]);
+    }
+
+    return result;
 }
+const perso = {
+    name: "Yousef",
+    age: 23,
+    city: "Amman"
+};
 
-
-console.log(grades(85));
-console.log(leapYears(2004))
-
+console.log(objectToArray(person));
 
